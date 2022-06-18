@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
-const PORT = process.env.PORT || 8005
+const PORT = 8005
 require('dotenv').config()
 
 //Declared Variables
@@ -81,6 +81,6 @@ app.delete('/deleteRestaurant', (request, response) => {
 
 })
 
-app.listen(PORT, () =>
-  console.log(`Application is listening on port ${PORT}!`)
-);
+app.listen(process.env.PORT || PORT, ()=>{
+    console.log(`Server running on port ${PORT}`)
+})
