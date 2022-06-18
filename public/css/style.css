@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Desktop */
+body{
+    background-color: #c8ffdd;
+}
+
+h1{
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: center;
+}
+
+.greeting-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.greeting-wrapper:hover{
+   background: none;
+}
+
+.greeting-title{
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+ 
+}
+
+#name{
+    font-family: 'Fredoka One', cursive;
+    color: black;
+    border: none;
+}
+
+.fa-trash{
+    cursor: pointer;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal{
+    border: solid 2.5px #000000;
+    background-color: #d4d4ff;
+    overflow: hidden;
+    height: 30rem;
+    width: 25rem;
+    padding: 5rem;
+    padding-top: 1.5rem;
+}
+
+.modal .show{
+    pointer-events: auto;
+    opacity: 1;
+}
+ .btn-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+} 
+
+.open-button{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+}
+        
+.open-button::after {
+    content: "";
+    background-color: #d4d4ff;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+      
+.open-button:hover::after {
+    top: 0px;
+    left: 0px;
+}
+
+.close-button {
+    background: none;
+    color: #000000;
+    font-family: 'Fredoka One', cursive;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    border: solid #000000 0.2rem;
+    border-radius: 1rem;
+    margin-left: 15rem;
+}
+
+
+
+
+.title{
+    margin-top: 30px;
+    font-family: 'Fredoka One', cursive; 
+}
+
+input{
+    display: block;
+    width: 100%;
+    min-width: max-content;
+    border: none;  
+    border-bottom: solid 3px #000000;
+    margin-bottom: 2rem;
+    font-size: large;
+    font-family: 'Fredoka One', cursive; 
+    color: grey;
+    background-color: transparent;
+    outline: none;
+}
+
+input:focus{
+  border-bottom: 5px solid #fff5b1;
+}
+
+/* button{
+    cursor: pointer;
+}  */
+
+
+
+/* restaurants section */
+.section1{
+    width: 50%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+    background-color: #fcf1ac;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: solid 2.5px #000000;
+    padding: 1em;
+    height: fit-content;
+}
+
+section:hover{
+    background-color: #faec8d;
+}
+
+summary{
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: center;
+}
+
+details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+dl {
+	display: flex;
+	flex-wrap: wrap;
+}
+dt {
+	font-weight: 700;
+}
+div {
+margin-right: 4em;
+margin-bottom: 2em;
+}
+
+
+@media (min-device-width: 414px) and (max-device-width: 896px) { 
+    body{
+        background-color: #c8ffdd;
+        line-height: 1.5;
+    }
+    
+/*     
+    .wrapper{
+        max-height: 100%;
+        max-width: 100%;
+    
+    }   */
+
+    h1{
+        font-size: clamp(1.5rem, 10vw, 1.5em); /*research this*/
+        display: flex;
+        justify-content: center;
+        font-family: 'Fredoka One', cursive;
+    }
+    
+
+    .wrapper{
+        max-width: 100%;
+        display: block;
+    }
+    
+    form{
+        border: solid 2.5px #000000;
+        background-color: #d4d4ff;
+        /* min-height: 30rem;  */
+        /* max-height: 100%;
+        max-width: 100%; */
+        padding: 5rem;
+        padding-top: 1.5rem;
+    
+    }
+    input{
+        display: block;
+        width: 100%;
+        min-width: max-content;
+        border: none;  
+        border-bottom: solid 3px #000000;
+        margin-bottom: 2rem;
+        font-size: large;
+        color: grey;
+        background-color: transparent;
+        outline: none;
+    }
+    
+    input:focus{
+      border-bottom: 5px solid orange
+    }
+    
+    /* button{
+        cursor: pointer;
+    } */
+  
+}
+
+/* restaurants section */
+.section1{
+    width: 50%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+    background-color: #fcf1ac;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: solid 2.5px #000000;
+    padding: 1em;
+    height: fit-content;
+    margin-top: 1rem;
+}
+
+section:hover{
+    background-color: #faec8d;
+}
+
+summary{
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: center;
+}
+
+details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+dl {
+	display: flex;
+	flex-wrap: wrap;
+}
+dt {
+	font-weight: 700;
+}
+div {
+margin-right: 4em;
+margin-bottom: 2em;
+}
+
+
+
+/* list design */
+
+.restaurant{
+    list-style: none;
+    margin: 5%;
+    min-height:1em;
+    padding:1rem;
+    background-color: #faec8d;
+    border: solid 1px #000000;
+    border-radius: 2rem;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: space-around;
+    /*  */
+    /* display: flex;
+    justify-content: space-between;
+    padding: 1.3rem;
+    border-bottom: 1px solid rgb(218, 211, 211);
+ */ 
+}

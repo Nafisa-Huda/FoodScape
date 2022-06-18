@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a995213cd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Favorite Restaurant Tracker</h1>
+
+    <!-- Greeting -->
+		<section class="greeting-wrapper">
+			<h2 class="greeting-title"> What's up, <input type="text" id="name" placeholder="Name here" /></h2>
+		</section>
+
+    <!-- open modal button -->
+    <div class="btn-container">
+        <button class="button open-button">Insert Restaurant</button>
+    </div>
+
+    <!-- wrapper for modal -->
+    <div class="wrapper">
+        <dialog class="modal" id="modal">
+            <form action="/addRestaurant" method="POST">
+                <button class="button close-button">&times</button>
+                <h2 class="title">Please fill in the info:</h2>
+                <input type="text" placeholder="Restaurant" name="restaurantName" required="">
+                <input type="text" placeholder="Cuisine" name="cuisineName" required="">
+                <select name="priceRange" required="">
+                    <option value="$">$</option>
+                    <option value="$$">$$</option>
+                    <option value="$$$">$$$</option>
+                    <option value="$$$$">$$$$</option>
+                </select>
+                <input type="text" placeholder="Vibe" name="resVibe" required=""> 
+                <input type="submit" name="" id="">
+            </form>  
+        </dialog>
+    </div>
+
+    <!-- list of restaurants -->
+        <ul class="restaurants">
+            <% for(let i=0; i < info.length; i++) {%>
+                <li class="restaurant">
+                    <span class="res-name"><%= info[i].restaurantName %></span>
+                    <span class="cui-name"><%= info[i].cuisineName %></span>
+                    <span class="pri-range"><%= info[i].priceRange %></span>
+                    <span class="vibe"><%= info[i].resVibe %></span>
+                    <!-- <span><%= info[i].likes %></span> -->
+                    <span class="fa-solid fa-pen-to-square"></span>
+                    <!-- change rest of classes to edit -->
+                    <span class='fa fa-trash'></span>
+                </li>
+            <% } %>
+            </ul>  
+
+    <script src='js/main.js'></script>
+</body>
