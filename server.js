@@ -82,5 +82,5 @@ app.delete('/deleteRestaurant', (request, response) => {
 })
 
 app.listen(process.env.PORT || PORT, ()=>{
-    console.log(`Server running on port ${PORT}`)
+    console.log(`The server is running on port ${PORT}! You better go catch it!`)
 })
