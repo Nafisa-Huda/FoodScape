@@ -1,5 +1,3 @@
-// const { name } = require("ejs")
-
 const deleteText = document.querySelectorAll('.fa-trash')
 const thumbText = document.querySelectorAll('.fa-thumbs-up')
 
@@ -87,10 +85,19 @@ nameInput.addEventListener('change', (e) => {
 		localStorage.setItem('username', e.target.value);
 })
 
-// Localstorage for restaurants
 
+
+// Localstorage for restaurants
 // check localstorage for restaurant data
 const resInfo = JSON.parse(localStorage.getItem("resInfo"));
+
+
+if(resInfo) {
+  resInfo.res_name;
+  resInfo.cui_name;
+  resInfo.pri_range;
+  resInfo.vibe
+}
 
 document.getElementById("submit").addEventListener('click', function (event){
   
@@ -115,4 +122,4 @@ document.getElementById("submit").addEventListener('click', function (event){
 
     localStorage.setItem('resInfo', JSON.stringify(resInfo));
 })
-
+ 
