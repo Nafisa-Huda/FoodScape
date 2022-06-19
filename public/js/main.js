@@ -78,12 +78,12 @@ closeModal.addEventListener("click", () => {
 
 
 //Localstorage for username
-// const nameInput = document.querySelector('#name') //getting name id
-// const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
-// nameInput.value = username; 
-// nameInput.addEventListener('change', (e) => {
-// 		localStorage.setItem('username', e.target.value);
-// })
+const nameInput = document.querySelector('#name') //getting name id
+const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
+nameInput.value = username; 
+nameInput.addEventListener('change', (e) => {
+		localStorage.setItem('username', e.target.value);
+})
 
 
 
@@ -100,7 +100,8 @@ if(resInfo) {
 }
 
 document.getElementById("submit").addEventListener('click', function (event){
-  
+  event.preventDefault()
+
   //get values from form inputs
   const res_name = document.getElementById("restaurantName").value;
   const cui_name = document.getElementById("cuisineName").value;
