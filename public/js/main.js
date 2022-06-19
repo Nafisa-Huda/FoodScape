@@ -1,3 +1,5 @@
+// const { name } = require("ejs")
+
 const deleteText = document.querySelectorAll('.fa-trash')
 const thumbText = document.querySelectorAll('.fa-thumbs-up')
 
@@ -85,34 +87,32 @@ nameInput.addEventListener('change', (e) => {
 		localStorage.setItem('username', e.target.value);
 })
 
-//Localstorage for restaurants
-// const res_name = document.querySelector("res-name");
-// const cui_name = document.querySelector("cui-name");
-// const pri_range = document.querySelector("pri-range");
-// const vibe = document.querySelector("vibe");
+// Localstorage for restaurants
 
-// input.onClick = function () {
-//   const key = res_name.value
-//   const value = cui_name.value
-//   const keys = pri_range.value
-//   const values = vibe.value
-// }
+// check localstorage for restaurant data
+const resInfo = JSON.parse(localStorage.getItem("resInfo"));
 
+document.getElementById("submit").addEventListener('click', function (event){
+  
+  //get values from form inputs
+  const res_name = document.getElementById("restaurantName").value;
+  const cui_name = document.getElementById("cuisineName").value;
+  const pri_range = document.getElementById("priceRange").value;
+  const vibe = document.getElementById("vibeID").value;
 
+  // if values are valid 
+  if(!res_name || !cui_name || !pri_range || !vibe) {
+    return;
+  }
 
-// res_name.addEventListener('change', (e) => {
-// 		localStorage.setItem('res-name', e.target.value);
-// })
+  //save them in local storage
+  const resInfo = {
+    res_name,
+    cui_name,
+    pri_range,
+    vibe
+  };
 
-// cui_name.addEventListener('change', (e) => {
-//   localStorage.setItem('cui-name', e.target.value);
-// })
-
-// pri_range.addEventListener('change', (e) => {
-//   localStorage.setItem('pri-range', e.target.value);
-// })
-
-// vibe.addEventListener('change', (e) => {
-//   localStorage.setItem('vibe', e.target.value);
-// })
+    localStorage.setItem('resInfo', JSON.stringify(resInfo));
+})
 

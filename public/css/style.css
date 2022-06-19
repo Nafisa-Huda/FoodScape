@@ -28,6 +28,10 @@ h1{
  
 }
 
+.name-container{
+    display: flex;
+}
+
 #name{
     font-family: 'Fredoka One', cursive;
     color: black;

@@ -26,7 +26,9 @@
 
     <!-- Greeting -->
 		<section class="greeting-wrapper">
-			<h2 class="greeting-title"> What's up, <input type="text" id="name" placeholder="Name here" /></h2>
+            <div class="name-container">
+                <input type="text" id="name" placeholder="Name here"/>
+            </div>
 		</section>
 
     <!-- open modal button -->
@@ -40,16 +42,16 @@
             <form action="/addRestaurant" method="POST">
                 <button class="button close-button">&times</button>
                 <h2 class="title">Please fill in the info:</h2>
-                <input type="text" placeholder="Restaurant" name="restaurantName" required="">
-                <input type="text" placeholder="Cuisine" name="cuisineName" required="">
-                <select name="priceRange" required="">
+                <input id="restaurantName" type="text" placeholder="Restaurant" name="restaurantName" required="">
+                <input id="cuisineName" type="text" placeholder="Cuisine" name="cuisineName" required="">
+                <select id="priceRange" name="priceRange" required="">
                     <option value="$">$</option>
                     <option value="$$">$$</option>
                     <option value="$$$">$$$</option>
                     <option value="$$$$">$$$$</option>
                 </select>
-                <input type="text" placeholder="Vibe" name="resVibe" required=""> 
-                <input type="submit" name="" id="">
+                <input id="vibeID" type="text" placeholder="Vibe" name="resVibe" required=""> 
+                <input type="submit" name="" id="submit">
             </form>  
         </dialog>
     </div>
@@ -58,10 +60,10 @@
         <ul class="restaurants">
             <% for(let i=0; i < info.length; i++) {%>
                 <li class="restaurant">
-                    <span class="res-name"><%= info[i].restaurantName %></span>
-                    <span class="cui-name"><%= info[i].cuisineName %></span>
-                    <span class="pri-range"><%= info[i].priceRange %></span>
-                    <span class="vibe"><%= info[i].resVibe %></span>
+                    <span class="res_name" id="res_name"><%= info[i].restaurantName %></span>
+                    <span class="cui_name" id="cui_name"><%= info[i].cuisineName %></span>
+                    <span class="pri_range" id="pri_range"><%= info[i].priceRange %></span>
+                    <span class="vibe" id="vibe"><%= info[i].resVibe %></span>
                     <!-- <span><%= info[i].likes %></span> -->
                     <span class="fa-solid fa-pen-to-square"></span>
                     <!-- change rest of classes to edit -->
