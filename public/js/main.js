@@ -78,12 +78,12 @@ closeModal.addEventListener("click", () => {
 
 
 //Localstorage for username
-const nameInput = document.querySelector('#name') //getting name id
-const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
-nameInput.value = username; 
-nameInput.addEventListener('change', (e) => {
-		localStorage.setItem('username', e.target.value);
-})
+// const nameInput = document.querySelector('#name') //getting name id
+// const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
+// nameInput.value = username; 
+// nameInput.addEventListener('change', (e) => {
+// 		localStorage.setItem('username', e.target.value);
+// })
 
 
 
@@ -122,4 +122,3 @@ document.getElementById("submit").addEventListener('click', function (event){
 
     localStorage.setItem('resInfo', JSON.stringify(resInfo));
 })
- 
