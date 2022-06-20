@@ -1,13 +1,8 @@
 const deleteText = document.querySelectorAll('.fa-trash')
-const thumbText = document.querySelectorAll('.fa-thumbs-up')
-
 Array.from(deleteText).forEach((element)=>{
     element.addEventListener('click', deleteRestaurant)
 })
 
-Array.from(thumbText).forEach((element)=>{
-    element.addEventListener('click', addLike)
-})
 
 async function deleteRestaurant(){
     const rName = this.parentNode.childNodes[1].innerText
@@ -33,34 +28,6 @@ async function deleteRestaurant(){
         console.log(err)
     }
 }
-
-// async function addLike(){
-//     const rName = this.parentNode.childNodes[1].innerText
-//     const cName = this.parentNode.childNodes[3].innerText
-//     const pRange = this.parentNode.childNodes[1].innerText
-//     const resVibe = this.parentNode.childNodes[3].innerText
-//     // const tLikes = Number(this.parentNode.childNodes[5].innerText)
-//     try{
-//         const response = await fetch('addOneLike', {
-//             method: 'put',
-//             headers: {'Content-Type': 'application/json'},
-//             body: JSON.stringify({
-//               'restaurantNameS': rName,
-//               'cuisineNameS': cName,
-//               'priceRangeS': pRange,
-//               'resVibeS': resVibe,
-//               // 'likesS': tLikes
-//             })
-//           })
-//         const data = await response.json()
-//         console.log(data)
-//         location.reload()
-
-//     }catch(err){
-//         console.log(err)
-//     }
-// }
-
 
 //Modal Popup
 const modal = document.querySelector("#modal"); //getting the modal
@@ -94,7 +61,7 @@ closeModal.addEventListener("click", () => {
 const resInfo = JSON.parse(localStorage.getItem("resInfo"));
 
 document.getElementById("submit").addEventListener('click', function (event){
-  event.preventDefault()
+// event.preventDefault()
 
   //get values from form inputs
   const res_name = document.getElementById("restaurantName").value

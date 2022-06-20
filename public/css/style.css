@@ -185,13 +185,10 @@ input:focus{
         background-color: #c8ffdd;
         line-height: 1.5;
     }
-    
-/*     
-    .wrapper{
-        max-height: 100%;
-        max-width: 100%;
-    
-    }   */
+
+    ul{
+        display: contents;
+    }
 
     h1{
         font-size: clamp(1.5rem, 10vw, 1.5em); /*research this*/
@@ -206,16 +203,17 @@ input:focus{
         display: block;
     }
     
-    form{
+    .modal{
         border: solid 2.5px #000000;
         background-color: #d4d4ff;
-        /* min-height: 30rem;  */
-        /* max-height: 100%;
-        max-width: 100%; */
-        padding: 5rem;
-        padding-top: 1.5rem;
-    
     }
+    
+
+    form{
+        background-color: #d4d4ff;
+        padding: 2rem; 
+    }
+
     input{
         display: block;
         width: 100%;
@@ -230,13 +228,10 @@ input:focus{
     }
     
     input:focus{
-      border-bottom: 5px solid orange
+      border-bottom: 5px solid #faec8d;
+
     }
     
-    /* button{
-        cursor: pointer;
-    } */
-  
 }
 
 /* About page, desktop */
@@ -387,8 +382,12 @@ z-index: -2000;
   } */
   
   @media only screen and (max-width: 650px) {
-    body {
-      background-color: black;
+    .about_container {
+        background: #c8ffdd;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+        position: relative;
     }
   }
   
