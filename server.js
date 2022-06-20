@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json()) 
 
 app.get('/', (request,response)=>{
-    response.sendFile('about.html')
+    response.sendFile('about.html', {root: 'public'})
 })
 
 // app.get('/views/index.ejs',(request, response)=>{
