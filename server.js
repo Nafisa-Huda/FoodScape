@@ -22,10 +22,9 @@ app.use(express.static('public'))//for client side files to work
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json()) 
 
-app.get('/', (req,res)=>{
-    res.sendFile('about.html')
+app.get('/', (request,response)=>{
+    response.sendFile('about.html')
 })
-
 
 app.get('/views/index.ejs',(request, response)=>{
     db.collection('restaurants').find().sort({likes: -1}).toArray()
