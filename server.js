@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json()) 
 
 app.get('/', (req,res)=>{
-    res.sendFile('/about.html')
+    res.sendFile('public/about.html')
 })
 
 
