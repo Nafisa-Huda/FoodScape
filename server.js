@@ -26,13 +26,13 @@ app.get('/', (request,response)=>{
     response.sendFile('about.html', {root: 'public'})
 })
 
-// app.get('/views/index.ejs',(request, response)=>{
-//     db.collection('restaurants').find().sort({likes: -1}).toArray()
-//     .then(data => {
-//         response.render('index.ejs', { info: data })
-//     })
-//     .catch(error => console.error(error))
-// })
+app.get('/views/index.ejs',(request, response)=>{
+    db.collection('restaurants').find().sort({likes: -1}).toArray()
+    .then(data => {
+        response.render('index.ejs', { info: data })
+    })
+    .catch(error => console.error(error))
+})
 
 
 app.post('/addRestaurant', (request, response) => {
