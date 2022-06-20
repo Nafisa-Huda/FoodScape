@@ -27,7 +27,7 @@ app.get('/', (req,res)=>{
 })
 
 
-app.get('/index.ejs',(request, response)=>{
+app.get('/views/index.ejs',(request, response)=>{
     db.collection('restaurants').find().sort({likes: -1}).toArray()
     .then(data => {
         response.render('index.ejs', { info: data })
