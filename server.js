@@ -18,7 +18,8 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
 })
     
 app.set('view engine', 'ejs')//Using ejs as templating langauge
-app.use(express.static('public'))// this line tells Express to use the public folder as our static folder from which we can serve static files//
+// app.use(express.static('public'))// this line tells Express to use the public folder as our static folder from which we can serve static files//
+app.use('/static',express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json()) 
 
