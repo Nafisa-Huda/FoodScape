@@ -34,32 +34,32 @@ async function deleteRestaurant(){
     }
 }
 
-async function addLike(){
-    const rName = this.parentNode.childNodes[1].innerText
-    const cName = this.parentNode.childNodes[3].innerText
-    const pRange = this.parentNode.childNodes[1].innerText
-    const resVibe = this.parentNode.childNodes[3].innerText
-    // const tLikes = Number(this.parentNode.childNodes[5].innerText)
-    try{
-        const response = await fetch('addOneLike', {
-            method: 'put',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              'restaurantNameS': rName,
-              'cuisineNameS': cName,
-              'priceRangeS': pRange,
-              'resVibeS': resVibe,
-              // 'likesS': tLikes
-            })
-          })
-        const data = await response.json()
-        console.log(data)
-        location.reload()
+// async function addLike(){
+//     const rName = this.parentNode.childNodes[1].innerText
+//     const cName = this.parentNode.childNodes[3].innerText
+//     const pRange = this.parentNode.childNodes[1].innerText
+//     const resVibe = this.parentNode.childNodes[3].innerText
+//     // const tLikes = Number(this.parentNode.childNodes[5].innerText)
+//     try{
+//         const response = await fetch('addOneLike', {
+//             method: 'put',
+//             headers: {'Content-Type': 'application/json'},
+//             body: JSON.stringify({
+//               'restaurantNameS': rName,
+//               'cuisineNameS': cName,
+//               'priceRangeS': pRange,
+//               'resVibeS': resVibe,
+//               // 'likesS': tLikes
+//             })
+//           })
+//         const data = await response.json()
+//         console.log(data)
+//         location.reload()
 
-    }catch(err){
-        console.log(err)
-    }
-}
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
 
 
 //Modal Popup
@@ -78,12 +78,14 @@ closeModal.addEventListener("click", () => {
 
 
 //Localstorage for username
-const nameInput = document.querySelector('#name') //getting name id
-const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
-nameInput.value = username; 
-nameInput.addEventListener('change', (e) => {
-		localStorage.setItem('username', e.target.value);
-})
+// const nameInput = document.querySelector('#name') //getting name id
+// const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
+// nameInput.value = username; 
+// nameInput.addEventListener('change', (e) => {
+// 		localStorage.setItem('username', e.target.value);
+// })
+
+
 
 
 
@@ -91,22 +93,14 @@ nameInput.addEventListener('change', (e) => {
 // check localstorage for restaurant data
 const resInfo = JSON.parse(localStorage.getItem("resInfo"));
 
-
-if(resInfo) {
-  resInfo.res_name;
-  resInfo.cui_name;
-  resInfo.pri_range;
-  resInfo.vibe
-}
-
 document.getElementById("submit").addEventListener('click', function (event){
   event.preventDefault()
 
   //get values from form inputs
-  const res_name = document.getElementById("restaurantName").value;
-  const cui_name = document.getElementById("cuisineName").value;
-  const pri_range = document.getElementById("priceRange").value;
-  const vibe = document.getElementById("vibeID").value;
+  const res_name = document.getElementById("restaurantName").value
+  const cui_name = document.getElementById("cuisineName").value
+  const pri_range = document.getElementById("priceRange").value
+  const vibe = document.getElementById("vibeID").value
 
   // if values are valid 
   if(!res_name || !cui_name || !pri_range || !vibe) {
@@ -121,5 +115,5 @@ document.getElementById("submit").addEventListener('click', function (event){
     vibe
   };
 
-    localStorage.setItem('resInfo', JSON.stringify(resInfo));
+ localStorage.setItem('resInfo', JSON.stringify(resInfo));
 })

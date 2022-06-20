@@ -31,6 +31,10 @@ app.get('/',(request, response)=>{
     .catch(error => console.error(error))
 })
 
+app.get('/about.html', (req,res)=>{
+    res.sendFile('/about')
+  })
+
 app.post('/addRestaurant', (request, response) => {
     db.collection('restaurants').insertOne({
         restaurantName: request.body.restaurantName,
@@ -47,27 +51,27 @@ app.post('/addRestaurant', (request, response) => {
 })
 
 
-app.put('/addOneLike', (request, response) => {
-    db.collection('restaurants').updateOne({
-            restaurantName: request.body.restaurantNameS, 
-            cuisineName: request.body.cuisineNameS, 
-            priceRange: request.body.priceRangeS, 
-            resVibe: request.body.resVibeS, 
-            likes: request.body.likesS}, {
-        $set: {
-            likes:request.body.likesS + 1
-          }
-    },{
-        sort: {_id: -1},
-        upsert: true
-    })
-    .then(result => {
-        console.log('Added One Like')
-        response.json('Like Added')
-    })
-    .catch(error => console.error(error))
+// app.put('/addOneLike', (request, response) => {
+//     db.collection('restaurants').updateOne({
+//             restaurantName: request.body.restaurantNameS, 
+//             cuisineName: request.body.cuisineNameS, 
+//             priceRange: request.body.priceRangeS, 
+//             resVibe: request.body.resVibeS, 
+//             likes: request.body.likesS}, {
+//         $set: {
+//             likes:request.body.likesS + 1
+//           }
+//     },{
+//         sort: {_id: -1},
+//         upsert: true
+//     })
+//     .then(result => {
+//         console.log('Added One Like')
+//         response.json('Like Added')
+//     })
+//     .catch(error => console.error(error))
 
-})
+// })
 
 app.delete('/deleteRestaurant', (request, response) => {
     db.collection('restaurants').deleteOne({
