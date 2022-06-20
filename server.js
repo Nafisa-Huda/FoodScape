@@ -45,7 +45,7 @@ app.post('/addRestaurant', (request, response) => {
     }) 
     .then(result => {
         console.log('Restaurant Added')
-        response.redirect('/')
+        response.redirect('/views/index.ejs')
     })
     .catch(error => console.error(error))
 })
