@@ -18,8 +18,8 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
 })
     
 app.set('view engine', 'ejs')//Using ejs as templating langauge
-// app.use(express.static('public'))// this line tells Express to use the public folder as our static folder from which we can serve static files//
-app.use('/static',express.static(__dirname + '/public'));
+app.set('views', path.join(__dirname, 'views'));
+pp.use(express.static('public'))// this line tells Express to use the public folder as our static folder from which we can serve static files//
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json()) 
 
@@ -27,7 +27,7 @@ app.get('/', (request,response)=>{
     response.sendFile('about.html', {root: 'public'})
 })
 
-app.get('/views/index.ejs',(request, response)=>{
+app.get('/index.ejs',(request, response)=>{
     db.collection('restaurants').find().sort({likes: -1}).toArray()
     .then(data => {
         response.render('index.ejs', { info: data })
