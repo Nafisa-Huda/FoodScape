@@ -22,8 +22,12 @@ app.use(express.static('public'))//for client side files to work
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json()) 
 
+app.get('/', (req,res)=>{
+    res.sendFile('/about.html')
+})
 
-app.get('/',(request, response)=>{
+
+app.get('/index.ejs',(request, response)=>{
     db.collection('restaurants').find().sort({likes: -1}).toArray()
     .then(data => {
         response.render('index.ejs', { info: data })
@@ -31,9 +35,6 @@ app.get('/',(request, response)=>{
     .catch(error => console.error(error))
 })
 
-app.get('/about.html', (req,res)=>{
-    res.sendFile('/about')
-  })
 
 app.post('/addRestaurant', (request, response) => {
     db.collection('restaurants').insertOne({
