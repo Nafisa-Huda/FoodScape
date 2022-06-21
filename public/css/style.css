@@ -253,7 +253,7 @@ z-index: -2000;
     bottom: -150px;
     left: 5%;
     font-size: 5rem;
-    animation: spin 10s linear infinite;
+    animation: spin 7s linear infinite;
 }
 
 .bg-area li:nth-child(2){

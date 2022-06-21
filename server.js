@@ -1,5 +1,8 @@
 //Required Dependencies
 const express = require('express')
+// const session = require("express-session") // Importing express-session module
+// const filestore = require("session-file-store")(session) // Importing file-store module
+// const path = require("path")
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const PORT = 8005
@@ -34,7 +37,6 @@ app.get('/views/index.ejs',(request, response)=>{
     .catch(error => console.error(error))
 })
 
-
 app.post('/addRestaurant', (request, response) => {
     db.collection('restaurants').insertOne({
         restaurantName: request.body.restaurantName,
@@ -50,30 +52,7 @@ app.post('/addRestaurant', (request, response) => {
     .catch(error => console.error(error))
 })
 
-
-// app.put('/addOneLike', (request, response) => {
-//     db.collection('restaurants').updateOne({
-//             restaurantName: request.body.restaurantNameS, 
-//             cuisineName: request.body.cuisineNameS, 
-//             priceRange: request.body.priceRangeS, 
-//             resVibe: request.body.resVibeS, 
-//             likes: request.body.likesS}, {
-//         $set: {
-//             likes:request.body.likesS + 1
-//           }
-//     },{
-//         sort: {_id: -1},
-//         upsert: true
-//     })
-//     .then(result => {
-//         console.log('Added One Like')
-//         response.json('Like Added')
-//     })
-//     .catch(error => console.error(error))
-
-// })
-
-app.delete('/deleteRestaurant', (request, response) => {
+app.delete('/views/deleteRestaurant', (request, response) => {
     db.collection('restaurants').deleteOne({
         restaurantName: request.body.restaurantNameS
     })
