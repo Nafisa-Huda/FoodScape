@@ -1,8 +1,5 @@
 //Required Dependencies
 const express = require('express')
-// const session = require("express-session") // Importing express-session module
-// const filestore = require("session-file-store")(session) // Importing file-store module
-// const path = require("path")
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const PORT = 8005

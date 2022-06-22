@@ -88,7 +88,7 @@ nameInput.addEventListener('change', (e) => {
 
 
 window.addEventListener('load', () => {
-	todos = JSON.parse(localStorage.getItem('todos')) || [];
+	// resInfos = JSON.parse(localStorage.getItem('resInfos')) || [];
 	// const form = document.getElementById('form');
 
   document.getElementById("submit").addEventListener('click', function (e){
@@ -97,17 +97,23 @@ window.addEventListener('load', () => {
     const cui_name = document.getElementById("cuisineName").value
     const pri_range = document.getElementById("priceRange").value
     const vibe = document.getElementById("vibeID").value
-
-		const todo = {
-      res_names: res_name,
-      cui_names: cui_name,
-      pri_ranges: pri_range,
-      vibes: vibe
+    resInfos = JSON.parse(localStorage.getItem('resInfos')) || [];
+    const resInfo = {
+      res_name,
+      cui_name,
+      pri_range,
+      vibe
 		}
+		// const todo = {
+    //   res_names: res_name,
+    //   cui_names: cui_name,
+    //   pri_ranges: pri_range,
+    //   vibes: vibe
+		// }
 
-		todos.push(todo);
+		resInfos.push(resInfo);
 
-		localStorage.setItem('todos', JSON.stringify(todos));
+		localStorage.setItem('resInfos', JSON.stringify(resInfos));
 
 		// Reset the form
 	})
