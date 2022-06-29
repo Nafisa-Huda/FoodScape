@@ -1,29 +1,204 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+
+/* About Page */
+.about_container {
+  background: #c8ffdd;
+  max-width: 500px;
+  border-radius: 3rem;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.about_body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-btn {
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fcf1ac;
+  cursor: pointer;
+  border-radius: 4rem;
+  border: solid 5px #000000;
+  padding: 1em;
+  height: fit-content;
+  margin-top: 1rem;
+  font-family: "Fredoka One", cursive;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_copy {
+  padding: 4rem 4rem 5rem 4rem;
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+p {
+  margin: 2rem 0 3rem 0;
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+.btn_primary {
+  padding: 1rem 2rem 1rem 2rem;
+  text-decoration: none;
+  border: solid 2px #000000;
+  border-radius: 3rem;
+  color: black;
+  font-size: 1.4rem;
+  background: #d4d4ff;
+  transition: all 0.2s ease-in;
+}
+
+.btn_primary:hover {
+  background: #cacaff;
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .about_container {
+    background: #c8ffdd;
+    max-width: 21rem;
+    border-radius: 4rem;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .about_container {
+    background: #c8ffdd;
+    max-width: 21rem;
+    border-radius: 4rem;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .about_container {
+    background: #c8ffdd;
+    max-width: 21rem;
+    border-radius: 4rem;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+}
+
+/* emoji animation */
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2000;
+}
+
+.bg-area li {
+  position: absolute;
+  list-style: none;
+  bottom: -150px;
+  left: 5%;
+  font-size: 5rem;
+  animation: spin 7s linear infinite;
+}
+
+.bg-area li:nth-child(2) {
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 15s;
+}
+
+.bg-area li:nth-child(3) {
+  left: 20%;
+  animation-delay: 4s;
+}
+
+.bg-area li:nth-child(4) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.bg-area li:nth-child(5) {
+  left: 40%;
+  animation-delay: 6s;
+  animation-duration: 30s;
+}
+
+.bg-area li:nth-child(6) {
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.bg-area li:nth-child(7) {
+  left: 60%;
+  animation-delay: 3s;
+}
+
+.bg-area li:nth-child(8) {
+  left: 70%;
+  animation-delay: 4s;
+  animation-duration: 25s;
+}
+
+.bg-area li:nth-child(9) {
+  left: 80%;
+  animation-delay: 8s;
+  animation-duration: 30s;
+}
+
+.bg-area li:nth-child(10) {
+  left: 90%;
+  animation-delay: 1s;
+}
+
+@keyframes spin {
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /* Restaurants page, Desktop */
 
-.about_body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  background: #b8ffda;
 }
 
-
-body{
-    background-color: #c8ffdd;
-}
-
-h1{
-    font-family: 'Fredoka One', cursive;
-    display: flex;
-    justify-content: center;
+h1 {
+  font-family: "Fredoka One", cursive;
+  display: flex;
+  justify-content: center;
 }
 
 /* Greeting */
-
+/* 
 .greeting-wrapper{
     display: flex;
     justify-content: center;
@@ -51,343 +226,192 @@ h1{
 
 .fa-trash{
     cursor: pointer;
-}
-
+} */
 
 /* Modal */
 
-.wrapper{
-    display: flex;
-    flex-direction: row;
+.wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
-.modal{
+.modal {
+  border: solid 2.5px #000000;
+  background-color: #d4d4ff;
+  overflow: hidden;
+  height: 30rem;
+  width: 25rem;
+  padding: 5rem;
+  padding-top: 1.5rem;
+}
+
+.modal .show {
+  pointer-events: auto;
+  opacity: 1;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.open-button {
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 1px solid #000000;
+  cursor: pointer;
+  position: relative;
+  background-color: #d4d4ff;
+  color: #000000;
+}
+
+.open-button:hover {
+  background-color: #cbcbfd;
+}
+
+.close-button {
+  background: none;
+  color: #000000;
+  font-family: "Fredoka One", cursive;
+  font-size: larger;
+  font-weight: bolder;
+  cursor: pointer;
+  border: solid #000000 0.2rem;
+  border-radius: 1rem;
+  margin-left: 15rem;
+}
+
+.close-button:hover {
+  background-color: #c1c1c1;
+}
+
+.title {
+  margin-top: 30px;
+  font-family: "Fredoka One", cursive;
+}
+
+input {
+  display: block;
+  width: 100%;
+  min-width: max-content;
+  border: none;
+  border-bottom: solid 3px #000000;
+  margin-bottom: 2rem;
+  font-size: large;
+  font-family: "Fredoka One", cursive;
+  color: grey;
+  background-color: transparent;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 5px solid #faec8d;
+}
+
+#priceRange {
+  display: flex;
+  margin-bottom: 1rem;
+  border: solid #000000 2px;
+  background-color: transparent;
+}
+
+#priceRange:hover {
+  background-color: #c1c1c1;
+  cursor: pointer;
+}
+
+#submit {
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 13px 50px 13px;
+  outline: 0;
+  border: 2px solid #000000;
+  cursor: pointer;
+  position: relative;
+  background-color: #faec8d;
+  color: #000000;
+}
+
+#submit:hover {
+  background-color: #fce867;
+}
+
+/* Restaurant list design */
+
+.restaurant {
+  list-style: none;
+  margin: 5%;
+  min-height: 1em;
+  padding: 1rem;
+  background-color: #faec8d;
+  border: solid 1px #000000;
+  border-radius: 2rem;
+  font-family: "Fredoka One", cursive;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa {
+  cursor: pointer;
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .modal {
     border: solid 2.5px #000000;
     background-color: #d4d4ff;
     overflow: hidden;
     height: 30rem;
     width: 25rem;
-    padding: 5rem;
+    padding: 3rem;
     padding-top: 1.5rem;
+  }
+
+  ul {
+    display: contents;
+  }
 }
 
-.modal .show{
-    pointer-events: auto;
-    opacity: 1;
-}
- .btn-container{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-} 
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
-.open-button{
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 200;
-    font-family: 'Fredoka One', cursive;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    padding: 13px 50px 13px;
-    outline: 0;
-    border: 1px solid black;
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
-}
-        
-.open-button::after {
-    content: "";
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .modal {
+    border: solid 2.5px #000000;
     background-color: #d4d4ff;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    top: 7px;
-    left: 7px;
-    transition: 0.2s;
-}
-      
-.open-button:hover::after {
-    top: 0px;
-    left: 0px;
-}
-
-.close-button {
-    background: none;
-    color: #000000;
-    font-family: 'Fredoka One', cursive;
-    font-size: larger;
-    font-weight: bolder;
-    cursor: pointer;
-    border: solid #000000 0.2rem;
-    border-radius: 1rem;
-    margin-left: 15rem;
-}
-
-.title{
-    margin-top: 30px;
-    font-family: 'Fredoka One', cursive; 
-}
-
-input{
-    display: block;
-    width: 100%;
-    min-width: max-content;
-    border: none;  
-    border-bottom: solid 3px #000000;
-    margin-bottom: 2rem;
-    font-size: large;
-    font-family: 'Fredoka One', cursive; 
-    color: grey;
-    background-color: transparent;
-    outline: none;
-}
-
-input:focus{
-  border-bottom: 5px solid #faec8d;
-}
-
-#submit{
-    cursor: pointer;
-    font-size: 20px;
-    letter-spacing: 1px;
-    padding: 13px 50px 13px;
-    outline: 0;
-    border: 2px solid #000000;
-    cursor: pointer;
-    position: relative;
-    background-color: #faec8d;
-    color: #000000;
-}
-
-/* Restaurant list design */
-
-.restaurant{
-    list-style: none;
-    margin: 5%;
-    min-height:1em;
-    padding:1rem;
-    background-color: #faec8d;
-    border: solid 1px #000000;
-    border-radius: 2rem;
-    font-family: 'Fredoka One', cursive;
-    display: flex;
-    justify-content: space-around;
-}
-
-
-/* Restaurant page, mobile */
-
-@media (min-device-width: 414px) and (max-device-width: 896px) { 
-    body{
-        background-color: #c8ffdd;
-        line-height: 1.5;
-    }
-
-    ul{
-        display: contents;
-    }
-
-    h1{
-        font-size: clamp(1.5rem, 10vw, 1.5em); /*research this*/
-        display: flex;
-        justify-content: center;
-        font-family: 'Fredoka One', cursive;
-    }
-    
-
-    .wrapper{
-        max-width: 100%;
-        display: block;
-    }
-    
-    .modal{
-        border: solid 2.5px #000000;
-        background-color: #d4d4ff;
-    }
-    
-
-    form{
-        background-color: #d4d4ff;
-        padding: 2rem; 
-    }
-
-    input{
-        display: block;
-        width: 100%;
-        min-width: max-content;
-        border: none;  
-        border-bottom: solid 3px #000000;
-        margin-bottom: 2rem;
-        font-size: large;
-        color: grey;
-        background-color: transparent;
-        outline: none;
-    }
-    
-    input:focus{
-      border-bottom: 5px solid #faec8d;
-
-    }
-    
-}
-
-/* About page, desktop */
-
-
-/* emoji background */
-.bg{
-position: fixed;
-left: 0;
-top: 0;
-width: 100vw;
-height: 100vh;
-z-index: -2000;
-}
-
-.bg-area li{
-    position: absolute;
-    list-style: none;
-    bottom: -150px;
-    left: 5%;
-    font-size: 5rem;
-    animation: spin 7s linear infinite;
-}
-
-.bg-area li:nth-child(2){
-    left: 10%;
-    animation-delay: 2s;
-    animation-duration:15s;
-}
-
-
-.bg-area li:nth-child(3){
-    left: 20%;
-    animation-delay: 4s;
-}
-
-
-.bg-area li:nth-child(4){
-    left: 30%;
-    animation-delay: 2s;
-
-}
-
-.bg-area li:nth-child(5){
-    left: 40%;
-    animation-delay: 6s;
-    animation-duration: 30s;
-}
-
-.bg-area li:nth-child(6){
-    left: 50%;
-    animation-delay: 2s;
-}
-
-.bg-area li:nth-child(7){
-    left: 60%;
-    animation-delay: 3s;
-
-}
-
-.bg-area li:nth-child(8){
-    left: 70%;
-    animation-delay: 4s;
-    animation-duration: 25s;
-}
-
-.bg-area li:nth-child(9){
-    left: 80%;
-    animation-delay: 8s;
-    animation-duration: 30s;
-}
-
-.bg-area li:nth-child(10){
-    left: 90%;
-    animation-delay: 1s;
-}
-
-@keyframes spin {
-    100% {
-        transform: translateY(-800px) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-/* about container */
-.about_container {
-    background: #c8ffdd;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.front-btn{
-    width: 25%;
-	margin-left: auto;
-	margin-right: auto;
-    background-color: #fcf1ac;
-    cursor: pointer;
-    border-radius: 4rem;
-    border: solid 5px #000000;
-    padding: 1em;
-    height: fit-content;
-    margin-top: 1rem;
-    font-family: 'Fredoka One', cursive;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-  
-  .container_copy {
-    padding: 4rem 4rem 5rem 4rem;
-    font-family: 'Fredoka One', cursive;
-
-  }
-  
-  h1 {
-    margin: 0 0 1rem 0;
-    font-size: 2.5rem;
-    letter-spacing: 0.5px;
-    color: #333;
-  }
-  
-  p {
-    margin: 0 0 4.5rem 0;
-    font-size: 1.5rem;
-    line-height: 1.45;
-    color: #333;
-  }
-  
-  .btn_primary {
-    border: none;
-    outline: none;
-    background: linear-gradient(90deg, #ff9966, #ff5e62);
-    padding: 1.5rem 2rem;
-    border-radius: 50px;
-    color: white;
-    font-size: 1.2rem;
-    box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
-    transition: all 0.2s ease-in;
-    text-decoration: none;
+    overflow: hidden;
+    height: 30rem;
+    width: 25rem;
+    padding: 3rem;
+    padding-top: 1.5rem;
   }
 
-  /* .btn_primary:hover {
-    box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
-  } */
-  
-  @media only screen and (max-width: 650px) {
-    .about_container {
-        background: #c8ffdd;
-        max-width: 500px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
-        position: relative;
-    }
+  ul {
+    display: contents;
   }
-  
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .modal {
+    border: solid 2.5px #000000;
+    background-color: #d4d4ff;
+    overflow: hidden;
+    height: 30rem;
+    width: 25rem;
+    padding: 4rem;
+    padding-top: 1.5rem;
+  }
+
+  ul {
+    display: contents;
+  }
+}

@@ -1,30 +1,29 @@
-const deleteText = document.querySelectorAll('.fa-trash')
-Array.from(deleteText).forEach((element)=>{
-    element.addEventListener('click', deleteRestaurant)
-})
+const deleteText = document.querySelectorAll(".fa-trash");
+Array.from(deleteText).forEach((element) => {
+  element.addEventListener("click", deleteRestaurant);
+});
 
-async function deleteRestaurant(){
-  const rName = this.parentNode.childNodes[1].innerText
-  const cName = this.parentNode.childNodes[3].innerText
-  const pRange = this.parentNode.childNodes[1].innerText
-  const resVibe = this.parentNode.childNodes[3].innerText
-  try{
-      const response = await fetch('/views/deleteRestaurant', {
-          method: 'delete',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            'restaurantNameS': rName,
-            'cuisineNameS': cName,
-            'priceRangeS': pRange,
-            'resVibeS': resVibe
-          })
-        })
-      const data = await response.json()
-      console.log(data)
-      location.reload()
-
-  }catch(err){
-      console.log(err)
+async function deleteRestaurant() {
+  const rName = this.parentNode.childNodes[1].innerText;
+  const cName = this.parentNode.childNodes[3].innerText;
+  const pRange = this.parentNode.childNodes[1].innerText;
+  const resVibe = this.parentNode.childNodes[3].innerText;
+  try {
+    const response = await fetch("/views/deleteRestaurant", {
+      method: "delete",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        restaurantNameS: rName,
+        cuisineNameS: cName,
+        priceRangeS: pRange,
+        resVibeS: resVibe,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+    location.reload();
+  } catch (err) {
+    console.log(err);
   }
 }
 
@@ -41,19 +40,13 @@ closeModal.addEventListener("click", () => {
   modal.close();
 }); //when you click the close button, the modal closes
 
-
-
 // Localstorage for username
-const nameInput = document.querySelector('#name') //getting name id
-const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
-nameInput.value = username; 
-nameInput.addEventListener('change', (e) => {
-		localStorage.setItem('username', e.target.value);
-})
-
-
-
-
+// const nameInput = document.querySelector('#name') //getting name id
+// const username = localStorage.getItem('username') || ''; //saving username inputed, else empty string
+// nameInput.value = username;
+// nameInput.addEventListener('change', (e) => {
+// 		localStorage.setItem('username', e.target.value);
+// })
 
 // Localstorage for restaurants
 // check localstorage for restaurant data
@@ -68,7 +61,7 @@ nameInput.addEventListener('change', (e) => {
 // const pri_range = document.getElementById("priceRange").value
 // const vibe = document.getElementById("vibeID").value
 
-//   // if values are valid 
+//   // if values are valid
 //   if(!res_name || !cui_name || !pri_range || !vibe) {
 //     return;
 //   }
@@ -81,40 +74,35 @@ nameInput.addEventListener('change', (e) => {
 //     vibe
 //   };
 
-
 //  localStorage.setItem('resInfo', JSON.stringify(resInfo));
 // })
 
+window.addEventListener("load", () => {
+  // resInfos = JSON.parse(localStorage.getItem('resInfos')) || [];
+  // const form = document.getElementById('form');
 
-
-window.addEventListener('load', () => {
-	// resInfos = JSON.parse(localStorage.getItem('resInfos')) || [];
-	// const form = document.getElementById('form');
-
-  document.getElementById("submit").addEventListener('click', function (e){
-		e.preventDefault();
-    const res_name = document.getElementById("restaurantName").value
-    const cui_name = document.getElementById("cuisineName").value
-    const pri_range = document.getElementById("priceRange").value
-    const vibe = document.getElementById("vibeID").value
-    resInfos = JSON.parse(localStorage.getItem('resInfos')) || [];
+  document.getElementById("submit").addEventListener("click", function (e) {
+    // e.preventDefault();
+    const res_name = document.getElementById("restaurantName").value;
+    const cui_name = document.getElementById("cuisineName").value;
+    const pri_range = document.getElementById("priceRange").value;
+    const vibe = document.getElementById("vibeID").value;
+    resInfos = JSON.parse(localStorage.getItem("resInfos")) || [];
     const resInfo = {
       res_name,
       cui_name,
       pri_range,
-      vibe
-		}
-		// const todo = {
+      vibe,
+    };
+    // const resInfo = {
     //   res_names: res_name,
     //   cui_names: cui_name,
     //   pri_ranges: pri_range,
     //   vibes: vibe
-		// }
+    // }
 
-		resInfos.push(resInfo);
+    resInfos.push(resInfo);
 
-		localStorage.setItem('resInfos', JSON.stringify(resInfos));
-
-		// Reset the form
-	})
-})
+    localStorage.setItem("resInfos", JSON.stringify(resInfos));
+  });
+});
