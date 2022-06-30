@@ -17,6 +17,7 @@
 
 ## About
 A full-stack, mobile responsive application that allows users to keep track of their favorite restaurants by filling out a form. 
+
 <img src = "https://github.com/Nafisa-Huda/FoodScape/blob/main/ezgif.com-gif-maker%20(3).gif">
 
 
