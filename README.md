@@ -7,11 +7,11 @@
 - [Future Optimizations](##Future-Optimizations)  
 - [Lessons Learned](##Lessons-Learned)  
 - [About](##About)  
-<a name="##About"/>
-<a name="##Technologies Used"/>
-<a name="##Features"/>
-<a name="##Future Optimizations"/>
-<a name="##Lessons Learned"/>
+<a name="About"/>
+<a name="Technologies Used"/>
+<a name="Features"/>
+<a name="Future Optimizations"/>
+<a name="Lessons Learned"/>
 
 
 
