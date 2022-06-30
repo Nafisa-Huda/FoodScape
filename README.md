@@ -1,12 +1,12 @@
 # <a href = "https://food--scape.herokuapp.com/" target="_blank">FoodScape</a>
 
 ## Table of Contents  
-[About](##About)  
-[Technologies Used](##Technologies-Used)  
-[Features](##Features)  
-[Future Optimizations](##Future-Optimizations)  
-[Lessons Learned](##Lessons-Learned)  
-[About](##About)  
+- [About](##About)  
+- [Technologies Used](##Technologies-Used)  
+- [Features](##Features)  
+- [Future Optimizations](##Future-Optimizations)  
+- [Lessons Learned](##Lessons-Learned)  
+- [About](##About)  
 <a name="About"/>
 <a name="Technologies Used"/>
 <a name="Features"/>
