@@ -1,9 +1,9 @@
 # FoodScape
+
+## About 
 A full-stack mobile responsive application that allow users to keep track of their favorite restuarants by filling out a form. 
 
----
-
-![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/94311576/176741482-dff07ecd-8063-4345-a6c5-0187b0b4efe6.gif)
+<img src = "https://github.com/Nafisa-Huda/FoodScape/blob/main/ezgif.com-gif-maker%20(3).gif">
 
 
 
