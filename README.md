@@ -1,5 +1,11 @@
 # <a href = "https://food--scape.herokuapp.com/" target="_blank">FoodScape</a>
 
+## Table of Contents  
+[About](##About)  
+[Technologies Used:](##Technologies Used:)  
+<a name="About"/>
+
+
 ## About 
 A full-stack mobile responsive application that allow users to keep track of their favorite restuarants by filling out a form. 
 
@@ -14,6 +20,9 @@ A full-stack mobile responsive application that allow users to keep track of the
 - Node.js
 - MongoDB
 - Express
+
+## Features:
+Users can add a restaurant by filling out a form. The form includes a "restaurant name", "cuisine", "price range", and "vibe" section. In addition, users can delete any restaurant entry. 
 
 ## Future Optimizations:
 - Local Storage 
