@@ -1,4 +1,4 @@
-# <a href = "https://food--scape.herokuapp.com/" target="">FoodScape</a>
+# <a href = "https://food--scape.herokuapp.com/" target="_blank">FoodScape</a>
 
 ## About 
 A full-stack mobile responsive application that allow users to keep track of their favorite restuarants by filling out a form. 
