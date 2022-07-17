@@ -34,7 +34,7 @@ A full-stack, mobile responsive application that allows users to keep track of t
 Users can add a restaurant by filling out a form. The form includes a "restaurant name", "cuisine", "price range", and "vibe" section. In addition, users can delete any restaurant entry. 
 
 ## Future Optimizations
-- Local Storage 
+- User authentication 
 - Edit function 
  
 ## Lessons Learned
